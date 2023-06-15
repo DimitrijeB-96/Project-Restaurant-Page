@@ -1,3 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600;700;800&family=Handlee&family=Kalam:wght@300;400;700&family=Varela+Round&display=swap');
+/* Dosis
+   Varela Round
+   Kalam
+   Handlee
+*/
+
+:root {
+  --stone-light: #f5f5f4;
+
+  --slate-light: #f1f5f9;
+  --slate-mid: #94a3b8;
+  --slate-dark: #334155;
+
+  --blue-mid: #38bdf8;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,5 +22,137 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  width: 100vw;
+  height: 100vh;
+  /* Angela Pham unsplash.com/@apham  */
+  background-image: url(./images/background-picture.jpg);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* --slate-light used with opacity */
+  background: linear-gradient(90deg, rgba(241, 245, 249, 0.8) 0%, rgba(241, 245, 249, 0.5) 30%,  rgba(241, 245, 249, 0.2) 60%, rgba(241, 245, 249, 0) 100%);
+
+  width: 100vw;
+  height: 10vh;
+}
+
+.logo-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 100%;
+  margin-left: 100px;
+}
+
+.header h1 {
+  font-family: 'Handlee', Arial, Helvetica, sans-serif;
+  font-size: 45px;
+  color: var(--blue-mid);
+}
+
+.nav-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 600px;
+  height: 100%;
+  margin-right: 200px;
+}
+
+.header ul {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  height: 100%;
+  align-items: center;
+}
+
+.header li {
+  font-family: 'Varela Round', Arial, Helvetica, sans-serif;
+  color: var(--slate-mid);
+  font-size: 30px;
+  font-weight: 700;
+  cursor: pointer;
+  padding-bottom: 5px;
+}
+
+.header li:hover {
+  color: var(--blue-mid);
+  border-bottom: 3px solid var(--blue-mid);
+}
+
+.content {
+  width: 100vw;
+  height: 90vh;
+}
+
+.home,
+.menu,
+.aboutUs {
+  width: 100%;
+  height: 100%;
+}
+
+.home {
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr 2fr;
+  grid-template-rows: 1fr 3fr 1fr;
+  grid-template-areas: 
+    "top top top top"
+    "left hero content right"
+    "bottom bottom bottom bottom";
+}
+
+.hero-div-home {
+  grid-area: hero;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+}
+
+.hero-div-home h2 {
+  font-family: 'Handlee', Arial, Helvetica, sans-serif;
+  color: var(--slate-dark);
+  font-size: 36px;
+}
+
+.hero-div-home p {
+  font-family: 'Kalam', Arial, Helvetica, sans-serif;
+  color: var(--slate-mid);
+  font-size: 24px;
+}
+
+span.bold {
+  font-family: 'Handlee', Arial, Helvetica, sans-serif;
+  color: var(--blue-mid);
+  font-weight: bold;
+}
+
+.content-div-home {
+  grid-area: content;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  border: 4px solid var(--stone-light);
+  border-radius: 10px;
+  background: linear-gradient(180deg, rgba(241, 245, 249, 0.9) 0%, rgba(241, 245, 249, 0.7) 40%,  rgba(241, 245, 249, 0.5) 60%, rgba(241, 245, 249, 0.2) 100%);
+}
+
+.content-div-home h2 {
+  font-family: 'Varela Round', Arial, Helvetica, sans-serif ;
+  color: var(--blue-mid);
+  font-size: 32px;
+}
+
+.content-div-home p {
+  font-family: 'Kalam', Arial, Helvetica, sans-serif;
+  color: var(--slate-mid);
 }
