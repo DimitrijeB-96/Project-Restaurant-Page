@@ -1,22 +1,23 @@
 import './style.css';
 import header, { displayHeader, navHome, navMenu, navAboutUs } from './header.js';
 import homePage, { displayHomePage } from './pages/home.js';
-import menuPage, { displayMenuPage } from './pages/menu.js';
+import menuPage, { displayMenuPage, isPageLoaded as menuLoaded } from './pages/menu.js';
 import aboutUsPage, { displayAboutUsPage } from './pages/aboutUs.js';
 
 const content = document.createElement('div');
 
-let currentPage = homePage;
+let currentPage = menuPage;
 
 navHome.addEventListener('click', displayHome);
 navMenu.addEventListener('click', displayMenu);
 navAboutUs.addEventListener('click', displayAboutUs);
 
 function displayHome() {
-  if (currentPage === aboutUsPage) {
-    content.removeChild(aboutUsPage);
-  } else if (currentPage === menuPage) {
+  menuLoaded = false;
+  if (currentPage === menuPage) {
     content.removeChild(menuPage);
+  } else if (currentPage === aboutUsPage) {
+    content.removeChild(aboutUsPage);
   }
   content.appendChild(homePage);
   currentPage = homePage;
@@ -24,19 +25,24 @@ function displayHome() {
 }
 
 function displayMenu() {
-  if (currentPage === homePage) {
+  if (menuLoaded === true) {
+    return;
+  } else if (currentPage === homePage) {
     content.removeChild(homePage);
   } else if (currentPage === aboutUsPage) {
     content.removeChild(aboutUsPage);
-  }
+  } 
   content.appendChild(menuPage);
   currentPage = menuPage;
-  displayMenuPage();
+  menuLoaded = true;
 }
 
 function displayAboutUs() {
+  menuLoaded = false;
   if (currentPage === homePage) {
     content.removeChild(homePage);
+  } else if (currentPage === menuPage) {
+    content.removeChild(menuPage);
   }
   content.appendChild(aboutUsPage);
   currentPage = aboutUsPage;
@@ -51,7 +57,8 @@ function displayToDom() {
   content.classList.add('content');
 
   content.appendChild(currentPage);
-  displayHomePage();
+  //displayHomePage();
+  displayMenuPage();
 }
 
 displayToDom();
