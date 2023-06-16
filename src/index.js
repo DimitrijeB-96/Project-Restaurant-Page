@@ -6,7 +6,7 @@ import aboutUsPage, { displayAboutUsPage } from './pages/aboutUs.js';
 
 const content = document.createElement('div');
 
-let currentPage = menuPage;
+let currentPage = homePage;
 
 navHome.addEventListener('click', displayHome);
 navMenu.addEventListener('click', displayMenu);
@@ -34,6 +34,7 @@ function displayMenu() {
   } 
   content.appendChild(menuPage);
   currentPage = menuPage;
+  displayMenuPage();
   menuLoaded = true;
 }
 
@@ -57,8 +58,7 @@ function displayToDom() {
   content.classList.add('content');
 
   content.appendChild(currentPage);
-  //displayHomePage();
-  displayMenuPage();
+  displayHomePage();
 }
 
 displayToDom();
