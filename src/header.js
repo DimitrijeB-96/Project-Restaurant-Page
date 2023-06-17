@@ -19,16 +19,19 @@ function headerLogo() {
 
 function homeBtn() {
   navHome.textContent = 'Home';
+  navHome.setAttribute('id', 'home');
   navUl.appendChild(navHome);
 }
 
 function menuBtn() {
   navMenu.textContent = 'Menu';
+  navMenu.setAttribute('id', 'menu');
   navUl.appendChild(navMenu);
 }
 
 function aboutUsBtn() {
   navAboutUs.textContent = 'About Us';
+  navAboutUs.setAttribute('id', 'aboutUs');
   navUl.appendChild(navAboutUs);
 }
 
@@ -44,9 +47,8 @@ function headerNav() {
 export function displayHeader() {
   header.classList.add('header');
   headerLogo();
-  header.appendChild(logoDiv);
   headerNav();
-  header.appendChild(navDiv);
+  header.append(logoDiv, navDiv);
 }
 
 export default header;
