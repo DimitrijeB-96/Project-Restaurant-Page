@@ -43,9 +43,13 @@ function displayAppetizerMenuDiv() {
   appetizerTitle.textContent = 'Appetizer';
 
   appetizerMenuDiv.appendChild(appetizerTitle);
-  appetizerMenuDiv.appendChild(createItem('Dorucak', 'Prvo Drugo Trece Cetvrto', 4));
-  appetizerMenuDiv.appendChild(createItem('Rucak', 'Prvo Drugo Trece Cetvrto', 6));
-  appetizerMenuDiv.appendChild(createItem('Vecera', 'Prvo Drugo Trece Cetvrto', 5));
+  appetizerMenuDiv.appendChild(createItem('Tzatziki', 'Homemade Yogurt with Cucumber, Garlic, Olive oil, Fresh Herbs, Served with Kalamata Olives and Pita bread', 9.99));
+  appetizerMenuDiv.appendChild(createItem('Shrimp Cocktail', '5 Wild Caught Jumbo Shrimp Served with Cocktail Sauce', 19.99));
+  appetizerMenuDiv.appendChild(createItem('Octopus', 'Grilled Octopus Served with Fingerling Potatoes Caramelized Onions capers Lemon pesto sauce', 10.99));
+  appetizerMenuDiv.appendChild(createItem('Vegetarian Sampler', 'Hummus / Baba Ghanoush / Zucchini / Tzatziki / Dolmades / Feta with Tomato & Cucumber', 10.99));
+  appetizerMenuDiv.appendChild(createItem('Grilled Calamari', 'Fresh Tender Calamari Grilled to Perfection', 16.99));
+  appetizerMenuDiv.appendChild(createItem('Fetta Patter', 'Served with a Greek Pita, Tomato, Cucumber, Olives, Olive Oil, Oregano', 11.99));
+  appetizerMenuDiv.appendChild(createItem('French Fries', '', 9.99));
 }
 
 function displayMainCourseMenuDiv() {
@@ -60,9 +64,15 @@ function displayMainCourseMenuDiv() {
   mainCourseTitle.textContent = 'Main Course';
 
   mainCourseMenuDiv.appendChild(mainCourseTitle);
-  mainCourseMenuDiv.appendChild(createItem('Dorucak', 'Prvo Drugo Trece Cetvrto', 4));
-  mainCourseMenuDiv.appendChild(createItem('Rucak', 'Prvo Drugo Trece Cetvrto', 6));
-  mainCourseMenuDiv.appendChild(createItem('Vecera', 'Prvo Drugo Trece Cetvrto', 5));
+  mainCourseMenuDiv.appendChild(createItem('Lamb Gyro', 'Grilled lamb gyros meat on Greek pita, Lettuce, Tomato, Onion, Tzatziki', 21.99));
+  mainCourseMenuDiv.appendChild(createItem('Chicken Gyro', 'Grilled Chicken breast meat in a special marinade on Greek pita, Lettuce, Tomato, Onion, Tzatziki', 18.99));
+  mainCourseMenuDiv.appendChild(createItem('Souvlaki', 'Grilled Pork marinated in spices on Greek pita, Lettuce, Tomato, Onion, Tzatziki', 19.99));
+  mainCourseMenuDiv.appendChild(createItem('Salmon', 'Mediterranean style Pan-seared Salmon sautéed with Fennel, Cherry Tomatoes, Risotto in butter Lemon Sauce', 27.99));
+  mainCourseMenuDiv.appendChild(createItem('Lobster Risotto', 'Risotto sautéed with Lobster Meat Peas and Cherry Tomatoes in a White Wine Garlic Sauce', 29.99));
+  mainCourseMenuDiv.appendChild(createItem('Orphali (spicy)', 'Ground Beef patty with garlic, spices & onion with hummus & rice, Lettuce, Greek pita', 18.99));
+  mainCourseMenuDiv.appendChild(createItem('Greek Steak', 'Fillet steak, Onions, Tomato, Fetta, Cucumber', 22.99));
+  mainCourseMenuDiv.appendChild(createItem('Chicken Santorini', 'Chicken breast with Shrimp, Tomatoe, Onion, Peppers, Mythos beer sauce topped with grated Fetta Cheese', 19.99));
+  mainCourseMenuDiv.appendChild(createItem('Special House Combo', 'Lamb Gyro / Chicken Gyro / Souvlaki / with soft drink and your choice of salad and potato chips', 34.99));
 }
 
 function displaySaladsMenuDiv() {
@@ -77,9 +87,12 @@ function displaySaladsMenuDiv() {
   saladMenuTitle.textContent = 'Salads';
 
   saladMenuDiv.appendChild(saladMenuTitle);
-  saladMenuDiv.appendChild(createItem('Dorucak', 'Prvo Drugo Trece Cetvrto', 4));
-  saladMenuDiv.appendChild(createItem('Rucak', 'Prvo Drugo Trece Cetvrto', 6));
-  saladMenuDiv.appendChild(createItem('Vecera', 'Prvo Drugo Trece Cetvrto', 5));
+  saladMenuDiv.appendChild(createItem('Greek', 'Cherry tomatoes, Cucumber, Feta Cheese, Olives, Onions, Olive oil', 11.99));
+  saladMenuDiv.appendChild(createItem('Caesar', 'Fresh romaine hearts, herbed croutons shaved parmigiana cheese in a classic creamy Caesar dressing', 12.99));
+  saladMenuDiv.appendChild(createItem('Santorini', 'Organic Fields Green, Cucumbers, Avocado, Fetta Cheese', 12.99));
+  saladMenuDiv.appendChild(createItem('Amvrakikos', 'Prawns with Avocado, Fresh Salad, Santorini Tomatoes, Olive Oil', 10.99));
+  saladMenuDiv.appendChild(createItem('Fattoush Salad', 'Lettuce, Tomato, Cucumber, Onion, Toasted bread topped with homemade Sumac Vinaigrette', 9.99));
+  saladMenuDiv.appendChild(createItem('Falafel Salad', 'Lettuce, Tomato, Onion, Falafel topped with Tahini Dressing', 9.99));
 }
 
 function displayDrinks() {
@@ -94,9 +107,18 @@ function displayDrinks() {
   drinksMenuTitle.textContent = 'Drinks & Wines';
 
   drinksMenuDiv.appendChild(drinksMenuTitle);
-  drinksMenuDiv.appendChild(createItem('Dorucak', 'Prvo Drugo Trece Cetvrto', 4));
-  drinksMenuDiv.appendChild(createItem('Rucak', 'Prvo Drugo Trece Cetvrto', 6));
-  drinksMenuDiv.appendChild(createItem('Vecera', 'Prvo Drugo Trece Cetvrto', 5));
+  drinksMenuDiv.appendChild(createItem('Coca Cola', '', 5.99));
+  drinksMenuDiv.appendChild(createItem('Sprite', '', 5.99));
+  drinksMenuDiv.appendChild(createItem('Coffee', 'American, Turkish', 9.99));
+  drinksMenuDiv.appendChild(createItem('Lemonade, Pomegranate', '', 10.99));
+  drinksMenuDiv.appendChild(createItem('Tea', 'Black English Tea, Green Tea, Lemon Tea', 11.99));
+  drinksMenuDiv.appendChild(createItem('Duval Leroy Brut Reserve NV Vertus', 'Pinot noir, Chardonnay', 12.99));
+  drinksMenuDiv.appendChild(createItem('Billecart Salmon Brut Reserve NV Ay', 'Pinot noir, Chardonnay', 13.99));
+  drinksMenuDiv.appendChild(createItem('Duval Leroy Prestige Premier Cru Brut Rose, Nv Vertus', 'Pinot Noir, Chardonnay', 15.99));
+  drinksMenuDiv.appendChild(createItem('Gancia Prosecco Brut DOC', 'Glera', 12.99));
+  drinksMenuDiv.appendChild(createItem('ROSE SPARKLING', '', 11.99));
+  drinksMenuDiv.appendChild(createItem('Vassaltis Winery, Santorini PDO', 'Assyrtiko', 13.99));
+  drinksMenuDiv.appendChild(createItem('Alfa Estate Sauvignon Blanc Fume, PGI, Amyntaio', 'Sauvignon blanc ', 18.99));
 }
 
 function displayDesserts() {
@@ -111,9 +133,20 @@ function displayDesserts() {
   dessertMenuTitle.textContent = 'Deserts';
 
   dessertMenuDiv.appendChild(dessertMenuTitle);
-  dessertMenuDiv.appendChild(createItem('Dorucak', 'Prvo Drugo Trece Cetvrto', 4));
-  dessertMenuDiv.appendChild(createItem('Rucak', 'Prvo Drugo Trece Cetvrto', 6));
-  dessertMenuDiv.appendChild(createItem('Vecera', 'Prvo Drugo Trece Cetvrto', 5));
+  dessertMenuDiv.appendChild(createItem('Watermelon', '', 6.99));
+  dessertMenuDiv.appendChild(createItem('Walnut Baklava', '', 8.99));
+  dessertMenuDiv.appendChild(createItem('Cashew Baklava', '', 8.99));
+  dessertMenuDiv.appendChild(createItem('Chopped seasonal fruits', 'With homemade Ice Cream', 12.99));
+  dessertMenuDiv.appendChild(createItem('Gianduja', 'Gianduja mousse, hazelnut biscuit, crunchy hazelnut praline & praline glaze.', 13.99));
+  dessertMenuDiv.appendChild(createItem('Aegina island', 'Caramelized mille feuille leaves with chocolate cream & pistachio.', 15.99));
+}
+
+// Not sure why scroll-padding-bottom/padding-bottom/margin-bottom doesn't work, so this is bit of cheating 
+function bottomBlank() {
+  const emptyDiv = document.createElement('div');
+  emptyDiv.classList.add('empty');
+
+  menuPage.appendChild(emptyDiv);
 }
 
 function displayMenuDiv() {
@@ -126,6 +159,7 @@ function displayMenuDiv() {
     displaySaladsMenuDiv();
     displayDrinks();
     displayDesserts();
+    bottomBlank();
   }
 }
 

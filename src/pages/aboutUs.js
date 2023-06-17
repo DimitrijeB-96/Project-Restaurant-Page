@@ -14,6 +14,8 @@ const aboutDiv = document.createElement('div');
 const aboutH2 = document.createElement('h2');
 const notRealProjectText = document.createElement('p');
 const projectGoalText = document.createElement('p');
+const aboutMenuItems = document.createElement('p');
+
 const projectBackgroundAuthorText = document.createElement('p');
 const projectBackgroundAuthorLink = document.createElement('a');
 
@@ -54,6 +56,7 @@ function displayAboutUsDiv() {
   aboutH2.textContent = 'About Us';
   notRealProjectText.textContent = 'We are not real restaurant!';
   projectGoalText.textContent = 'This is just a "project" from the Odin Project curriculum. Main goal of this project is to learning how to implement npm and webpack, with having header navigation bar.';
+  aboutMenuItems.textContent = 'Food list, names and ingredients are coppied from few restorants from Santorini.';
 
   projectCoverAuthorFirstText.textContent = 'Appetizer photo from ';
   projectCoverAuthorFirstText.appendChild(projectCoverAuthorFirstLink);
@@ -91,7 +94,7 @@ function displayAboutUsDiv() {
   projectBackgroundAuthorLink.href = 'https://www.unsplash.com/@apham';
   projectBackgroundAuthorLink.setAttribute('target', '_blank');
 
-  aboutDiv.append(aboutH2, notRealProjectText, projectGoalText);
+  aboutDiv.append(aboutH2, notRealProjectText, projectGoalText, aboutMenuItems);
   aboutDiv.append(projectCoverAuthorFirstText, projectCoverAuthorSecondText, projectCoverAuthorThirdText);
   aboutDiv.append(projectCoverAuthorForthText, projectCoverAuthorFifthText, projectBackgroundAuthorText);
 }
