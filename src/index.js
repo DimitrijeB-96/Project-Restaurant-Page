@@ -16,26 +16,25 @@ function displayPage(e) {
   if (e.target.id === 'home') {
     
     if (homeLoaded === true) {
-      console.log('nothing home');
       return;
     } else {
       if (menuLoaded === true) {
         content.removeChild(menuPage);
       } else if (aboutUsLoaded === true) {
         content.removeChild(aboutUsPage);
-      }
+      } 
+      content.appendChild(homePage);
+      displayHomePage();
+      currentPage = homePage;
+        
       homeLoaded = true;
       menuLoaded = false;
       aboutUsLoaded = false;
-      currentPage = homePage;
-      displayHomePage();
-      content.appendChild(homePage);
     }
 
   } else if (e.target.id === 'menu') {
 
     if (menuLoaded === true) {
-      console.log('nothing menu');
       return;
     } else {
       if (homeLoaded === true) {
@@ -43,18 +42,18 @@ function displayPage(e) {
       } else if (aboutUsLoaded === true) {
         content.removeChild(aboutUsPage);
       }
+      content.appendChild(menuPage);
+      displayMenuPage();
+      currentPage = menuPage;
+        
       homeLoaded = false;
       menuLoaded = true;
       aboutUsLoaded = false;
-      currentPage = menuPage;
-      displayMenuPage();
-      content.appendChild(menuPage);
     }
 
   } else if (e.target.id === 'aboutUs') {
 
     if (aboutUsLoaded === true) {
-      console.log('nothing about');
       return;
     } else {
       if (homeLoaded === true) {
@@ -62,12 +61,13 @@ function displayPage(e) {
       } else if (menuLoaded === true) {
         content.removeChild(menuPage);
       }
+      content.appendChild(aboutUsPage);
+      displayAboutUsPage();
+      currentPage = aboutUsPage;
+
       homeLoaded = false;
       menuLoaded = false;
       aboutUsLoaded = true;
-      currentPage = aboutUsPage;
-      displayAboutUsPage();
-      content.appendChild(aboutUsPage);
     }
 
   }
@@ -82,7 +82,10 @@ function displayToDom() {
   
   content.appendChild(currentPage);
   displayHomePage();
+  
   homeLoaded = true;
+  menuLoaded = false;
+  aboutUsLoaded = false;
 }
 
 displayToDom();
