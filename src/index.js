@@ -16,17 +16,18 @@ function displayPage(e) {
   if (e.target.id === 'home') {
     
     if (homeLoaded === true) {
+      console.log("don't do anything");
       return;
     } else {
       if (menuLoaded === true) {
         content.removeChild(menuPage);
       } else if (aboutUsLoaded === true) {
         content.removeChild(aboutUsPage);
-      } 
+      }
       content.appendChild(homePage);
       displayHomePage();
       currentPage = homePage;
-        
+          
       homeLoaded = true;
       menuLoaded = false;
       aboutUsLoaded = false;
@@ -35,6 +36,7 @@ function displayPage(e) {
   } else if (e.target.id === 'menu') {
 
     if (menuLoaded === true) {
+      console.log("don't do anything");
       return;
     } else {
       if (homeLoaded === true) {
@@ -45,7 +47,7 @@ function displayPage(e) {
       content.appendChild(menuPage);
       displayMenuPage();
       currentPage = menuPage;
-        
+          
       homeLoaded = false;
       menuLoaded = true;
       aboutUsLoaded = false;
@@ -54,6 +56,7 @@ function displayPage(e) {
   } else if (e.target.id === 'aboutUs') {
 
     if (aboutUsLoaded === true) {
+      console.log("don't do anything");
       return;
     } else {
       if (homeLoaded === true) {
@@ -64,12 +67,11 @@ function displayPage(e) {
       content.appendChild(aboutUsPage);
       displayAboutUsPage();
       currentPage = aboutUsPage;
-
+  
       homeLoaded = false;
       menuLoaded = false;
       aboutUsLoaded = true;
     }
-
   }
 }
 

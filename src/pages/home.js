@@ -1,5 +1,7 @@
 const homePage = document.createElement('div');
 
+let isPageLoaded = false;
+
 const heroDiv = document.createElement('div');
 const heroH2 = document.createElement('h2');
 const heroText = document.createElement('p');
@@ -47,5 +49,9 @@ export function displayHomePage() {
 }
 
 export default homePage;
+
+export {
+  isPageLoaded
+}
 
 

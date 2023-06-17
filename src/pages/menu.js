@@ -2,7 +2,6 @@ const menuPage = document.createElement('div');
 
 let isPageLoaded = false;
 
-
 function createMenus() {
   for (let i = 1; i < 6; i++) {
     const mainMenuDiv = document.createElement('div');
@@ -118,12 +117,16 @@ function displayDesserts() {
 }
 
 function displayMenuDiv() {
-  createMenus();
-  displayAppetizerMenuDiv();
-  displayMainCourseMenuDiv();
-  displaySaladsMenuDiv();
-  displayDrinks();
-  displayDesserts();
+  if (document.querySelector('.main-menu-div')) {
+    return;
+  } else {
+    createMenus();
+    displayAppetizerMenuDiv();
+    displayMainCourseMenuDiv();
+    displaySaladsMenuDiv();
+    displayDrinks();
+    displayDesserts();
+  }
 }
 
 export function displayMenuPage() {
