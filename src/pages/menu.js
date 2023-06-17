@@ -142,12 +142,12 @@ function displayDesserts() {
 }
 
 // Not sure why scroll-padding-bottom/padding-bottom/margin-bottom doesn't work, so this is bit of cheating 
-function bottomBlank() {
-  const emptyDiv = document.createElement('div');
-  emptyDiv.classList.add('empty');
+// function bottomBlank() {
+//   const emptyDiv = document.createElement('div');
+//   emptyDiv.classList.add('empty');
 
-  menuPage.appendChild(emptyDiv);
-}
+//   menuPage.appendChild(emptyDiv);
+// }
 
 function displayMenuDiv() {
   if (document.querySelector('.main-menu-div')) {
@@ -159,7 +159,7 @@ function displayMenuDiv() {
     displaySaladsMenuDiv();
     displayDrinks();
     displayDesserts();
-    bottomBlank();
+    // bottomBlank();
   }
 }
 
