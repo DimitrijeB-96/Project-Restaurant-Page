@@ -278,10 +278,6 @@ span.bold {
   margin: 0;
 }
 
-.empty {
-  border: 50px solid transparent;
-}
-
 .aboutUs {
   display: grid;
   grid-template-columns: 2fr 2fr 0.5fr 2fr 2fr;
