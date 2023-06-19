@@ -16,7 +16,6 @@ function displayPage(e) {
   if (e.target.id === 'home') {
     
     if (homeLoaded === true) {
-      console.log("don't do anything");
       return;
     } else {
       if (menuLoaded === true) {
@@ -36,7 +35,6 @@ function displayPage(e) {
   } else if (e.target.id === 'menu') {
 
     if (menuLoaded === true) {
-      console.log("don't do anything");
       return;
     } else {
       if (homeLoaded === true) {
@@ -56,7 +54,6 @@ function displayPage(e) {
   } else if (e.target.id === 'aboutUs') {
 
     if (aboutUsLoaded === true) {
-      console.log("don't do anything");
       return;
     } else {
       if (homeLoaded === true) {
@@ -75,7 +72,7 @@ function displayPage(e) {
   }
 }
 
-// Use to display Header and Content part of the page
+// Used to display Header and Content part of the page
 function displayToDom() {
   document.body.appendChild(header);
   displayHeader();
